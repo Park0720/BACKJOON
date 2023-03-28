@@ -1,4 +1,4 @@
-package org.example;
+package org.example.step1;
 import java.util.Scanner;
 public class B2588 {
     public static void main(String[] args){

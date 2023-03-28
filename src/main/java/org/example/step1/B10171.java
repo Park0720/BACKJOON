@@ -1,2 +1,12 @@
-package org.example.step1;public class B10171 {
+package org.example.step1;
+
+import java.util.Scanner;
+
+public class B10171 {
+    public static void main(String[] args) {
+        System.out.println("\\    /\\\n" +
+                " )  ( ')\n" +
+                "(  /  )\n" +
+                " \\(__)|");
+    }
 }

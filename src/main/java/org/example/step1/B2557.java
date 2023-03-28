@@ -1,4 +1,4 @@
-package org.example;
+package org.example.step1;
 
 public class B2557 {
     public static void main(String[] args){
