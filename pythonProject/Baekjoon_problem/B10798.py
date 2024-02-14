@@ -1,7 +1,8 @@
 base_list = [list(map(str, input())) for _ in range(5)]
 
-
-print(base_list)
-for i in range(len(base_list)):
-    for j in range(len(base_list[i])):
-        print(base_list[j][i], end='')
+for i in range(15):
+    for j in range(5):
+        try:
+            print(base_list[j][i], end='')
+        except:
+            continue
