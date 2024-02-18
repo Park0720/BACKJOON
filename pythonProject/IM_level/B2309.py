@@ -17,6 +17,10 @@
 
 # # Ver 2
 # def subset(i, k, subset_sum, target):
+#     answer_list = []
+#     global flag
+#     if flag:
+#         return
 #     # 합이 목표치를 넘어가는 경우 더 이상 고려할 필요 없음
 #     if subset_sum > target:
 #         return
@@ -32,10 +36,8 @@
 #                 answer_list.sort()
 #                 for answer in answer_list:
 #                     print(answer)
+#                     flag = True
 #     else:
-#         # for j in range(1, -1, -1):
-#         #     bit[i] = j
-#         #     f(i+1, k, target)
 #         # 다음 수를 포함 하기로 한 경우
 #         bit[i] = 1
 #         subset(i+1, k, subset_sum+small_list[i], target)
@@ -46,9 +48,9 @@
 #
 # N = 9
 # small_list = []
+# flag = False
 # for i in range(N):
 #     small_list.append(int(input()))
-# answer_list = []
 # bit = [0] * N
 # T = 100
 # subset(0, N, 0, T)
