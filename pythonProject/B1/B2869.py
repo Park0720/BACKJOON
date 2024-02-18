@@ -1,7 +1,8 @@
 A, B, V = map(int, input().split())
 
-answer = V - (A-B) * B
+answer = (V-B) / (A-B)
 
-if V == A:
-    answer = 1
-print(answer)
+if answer == int(answer):
+    print(int(answer))
+else:
+    print(int(answer) + 1)
