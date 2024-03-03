@@ -15,7 +15,7 @@ max_height = 0
 
 for i in range(6):
     if field[i][0] == 1 or field[i][0] == 2:
-       if max_width < field[i][1]:
+        if max_width < field[i][1]:
             max_width = field[i][1]
             max_width_idx = i
     else:
