@@ -25,21 +25,31 @@ def bfs(maps, visited):
 
 
 
+
 N, M = map(int, input().split())
-maze_list = [list(map(int, input())) for _ in range(N)]
+maze_list = [list(map(int, input().split())) for _ in range(N)]
 # 간선 수를 알아낼 미로와 같은 크기의 배열
 visited = [[0] * M for _ in range(N)]
 
 # 시작 지점, 끝 지점 초기화
 start_row, start_col = 0, 0
-end_row, end_col = N-1, M-1
 
+for i in range(N):
+    for j in range(M):
+            # 시작 지점 찾기
+            if maze_list[i][j] == 2:
+                start_row, start_col = i, j
 
 dr = [1, 0, -1, 0]
 dc = [0, 1, 0, -1]
 
 bfs(maze_list, visited)
-# 간선 수는 답안에서 -1 뺀 값
-answer = visited[end_row][end_col] + 1
 
-print(f'{answer}')
+for i in range(N):
+    for j in range(M):
+        if visited[i][j] == 0 and maze_list[i][j] == 1:
+            visited[i][j] = -1
+# 간선 수는 답안에서 -1 뺀 값
+
+for i in range(N):
+    print(*visited[i])
