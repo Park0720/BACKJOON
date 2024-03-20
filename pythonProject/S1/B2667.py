@@ -1,5 +1,3 @@
-import pprint
-
 def bfs(maps, visited):
     global count
     queue = []
