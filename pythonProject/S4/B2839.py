@@ -1,14 +1,12 @@
-N = int(input())
+n = int(input())
 
-count = 0
-while N > 0:
-    N -= 5
-    count += 1
-    if N % 3 == 0:
+cnt = 0
+while n >= 0:
+    if n % 5 == 0:
+        cnt += (n//5)
+        print(cnt)
         break
-
-while N > 0:
-    N -= 3
-    count += 1
-
-print(count, N)
+    n -= 3
+    cnt += 1
+else:
+    print(-1)
