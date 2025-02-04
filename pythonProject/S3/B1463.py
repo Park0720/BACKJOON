@@ -1,21 +1,23 @@
-X = int(input())
+import sys
 
-i = 0
-while True:
-    if X == 1:
-        break
-    if X % 3 == 0:
-        X //= 3
-        i += 1
-        if X == 1:
-            break
-    if X % 2 == 0:
-        X //= 2
-        i += 1
-        if X == 1:
-            break
+X = int(sys.stdin.readline().strip())
 
-    X -= 1
-    i += 1
+count = 0
 
-print(i)
+def calc(x, c):
+    global count
+    if count and c == count:
+        return
+    if x == 1:
+        count = c
+        return
+    c += 1
+    if x % 3 == 0:
+        calc(x // 3, c)
+    if x % 2 == 0:
+        calc(x // 2, c)
+    calc(x - 1, c)
+
+calc(X, 0)
+
+print(count)
